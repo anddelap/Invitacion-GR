@@ -27,6 +27,46 @@ body {
     padding: 40px 10px;
 }
 
+/* Contenedor flexible alineado al centro */
+.subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+/* Estrellas adaptables */
+.subtitle-container .img-estrella {
+    width: 20px;
+    height: auto;
+    flex-shrink: 0;
+    mix-blend-mode: multiply;
+}
+
+/* Subtítulo ajustado */
+.subtitle {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    color: var(--text-green, #596b4f);
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Ajuste responsivo para pantallas muy pequeñas (celulares) */
+@media (max-width: 400px) {
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .subtitle-container .img-estrella {
+        width: 16px;
+    }
+}
+
 /* Regla para mezclar imágenes con fondo blanco */
 img {
     mix-blend-mode: multiply;
@@ -79,7 +119,6 @@ img {
 
 /* Estrellas Decorativas */
 .img-estrella {
-    position: absolute;
     width: 25px;
     z-index: 2;
 }
@@ -319,28 +358,29 @@ NOTA DE REGALO
 
 /* Contenedor flexible para alinear imagen y texto */
 .gift-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  max-width: 275px;
-  margin: 0 auto 20px auto;
-  text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 70%;
+    margin: 0 auto 20px auto;
+    text-align: left;
 }
 
 .img-regalo {
-  width: 45px;
-  height: auto;
-  flex-shrink: 0;
-  mix-blend-mode: multiply; /* Mantiene la integración sin fondo */
+    width: 45px;
+    height: auto;
+    flex-shrink: 0;
+    mix-blend-mode: multiply;
+    /* Mantiene la integración sin fondo */
 }
 
 .gift-note {
-  font-size: 0.8rem;
-  color: #666;
-  line-height: 1.3;
-  margin: 0;
-  text-align: justify;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.3;
+    margin: 0;
+    text-align: justify;
 }
 
 /* =========================================
@@ -436,7 +476,7 @@ button[type="submit"] {
     box-shadow: 0 4px 10px rgba(216, 137, 129, 0.3);
 }
 
-#id_6.form-line::before{
+#id_6.form-line::before {
     background-color: transparent !important;
 }
 
@@ -475,63 +515,63 @@ RESPONSIVE - CELULAR
 }
 
 .baby-names {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 12px 0 20px;
-  color: var(--text-green);
-  font-family: inherit;
-  font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 12px 0 20px;
+    color: var(--text-green);
+    font-family: inherit;
+    font-size: 1.2rem;
 }
 
 .baby-names .or {
-  font-size: 0.9rem;
-  font-style: italic;
-  opacity: 0.7;
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.7;
 }
 
-.baby-names .girl-name{
+.baby-names .girl-name {
     color: var(--text-pink);
 }
 
 
 /* Botón principal */
 .rsvp-trigger-btn {
-  background-color: var(--text-pink, #d88981);
-  color: #ffffff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(216, 137, 129, 0.35);
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+    background-color: var(--text-pink, #d88981);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(216, 137, 129, 0.35);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 #arrowIcon {
-  font-size: 0.75rem;
-  transition: transform 0.3s ease;
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
 }
 
 /* Girar flecha al abrir */
 .rsvp-trigger-btn.active #arrowIcon {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 /* Persiana */
 .collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out;
-  margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    margin-top: 10px;
 }
 
 .collapsible-inner {
-  padding: 10px 0;
+    padding: 10px 0;
 }
