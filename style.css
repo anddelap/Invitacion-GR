@@ -1,0 +1,537 @@
+:root {
+    --text-green: #596b4f;
+    --text-pink: #d88981;
+    --border-color: #d8cdb8;
+    --card-bg: #fffbf4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f1e9da;
+
+    /* Fondo de cuadros/mantel */
+    background-image:
+        linear-gradient(90deg, rgba(190, 170, 145, 0.25) 50%, transparent 50%),
+        linear-gradient(rgba(190, 170, 145, 0.25) 50%, transparent 50%);
+
+    background-size: 30px 30px;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+/* Regla para mezclar imágenes con fondo blanco */
+img {
+    mix-blend-mode: multiply;
+}
+
+.card-border-outer {
+    max-width: 650px;
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.card-border-inner {
+    border: 2px dashed var(--border-color);
+    border-radius: 30px;
+    padding: 50px 20px 20px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Imagen Moño Superior */
+.img-mono {
+    width: 150px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    mix-blend-mode: initial !important;
+}
+
+/* Ramas Laterales */
+.img-rama {
+    position: absolute;
+    width: 60px;
+    top: 100px;
+    z-index: 2;
+}
+
+.img-rama-left {
+    left: 10px;
+}
+
+.img-rama-right {
+    right: 10px;
+}
+
+/* Estrellas Decorativas */
+.img-estrella {
+    position: absolute;
+    width: 25px;
+    z-index: 2;
+}
+
+.star-1 {
+    top: 60px;
+    right: 40px;
+}
+
+.star-2 {
+    top: 60px;
+    left: 40px;
+}
+
+/* =========================================
+TÍTULOS
+========================================= */
+
+.subtitle {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    color: var(--text-green);
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+h1 .line-1 {
+    color: var(--text-green);
+    font-size: 2.1rem;
+    font-weight: 700;
+    display: block;
+}
+
+h1 .divider-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-green);
+    font-size: 0.8rem;
+    margin: 4px 0;
+}
+
+h1 .divider-line::before,
+h1 .divider-line::after {
+    content: "";
+    height: 1px;
+    width: 60px;
+    background: var(--text-green);
+}
+
+h1 .line-2 {
+    color: var(--text-pink);
+    font-size: 2.7rem;
+    font-weight: 700;
+    display: block;
+}
+
+.intro-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* =========================================
+DETALLES DEL EVENTO
+========================================= */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.details-grid::before,
+.details-grid::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    border-top: 1px dotted var(--border-color);
+}
+
+.details-grid::before {
+    top: 0;
+}
+
+.details-grid::after {
+    bottom: 0;
+}
+
+.detail-item h3 {
+    font-size: 0.8rem;
+    color: var(--text-green);
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.detail-item p {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.location-name {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem !important;
+    color: var(--text-green);
+    font-weight: normal !important;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--text-green);
+}
+
+/* =========================================
+BOTÓN MAPA WAZE
+========================================= */
+
+.map-btn {
+    display: inline-block;
+    background-color: var(--text-green);
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(89, 107, 79, 0.2);
+}
+
+/* =========================================
+BLOQUE INFERIOR
+Patitos + Contribución + Regalo + Vestimenta
+========================================= */
+
+.bottom-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Contenido central */
+.bottom-info-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================
+PATITOS
+========================================= */
+
+.img-duck {
+    position: absolute;
+    width: 110px;
+    height: auto;
+    z-index: 2;
+}
+
+.duck-left {
+    left: 0;
+}
+
+.duck-right {
+    right: 0;
+}
+
+/* =========================================
+BLOQUE CONTRIBUCIÓN
+========================================= */
+
+.info-oval {
+    border: 1px dashed var(--border-color);
+    border-radius: 50px;
+    padding: 12px 20px;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    max-width: 280px;
+    background: #fff;
+    text-align: center;
+}
+
+.contribution-title {
+    color: var(--text-green);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Q125 con corazón a cada lado */
+.contribution-amount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contribution-amount {
+    color: var(--text-pink);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Corazones */
+.img-corazon {
+    width: 20px;
+    display: block;
+    margin: 0;
+}
+
+/* =========================================
+NOTA DE REGALO
+========================================= */
+
+/* Contenedor flexible para alinear imagen y texto */
+.gift-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 275px;
+  margin: 0 auto 20px auto;
+  text-align: left;
+}
+
+.img-regalo {
+  width: 45px;
+  height: auto;
+  flex-shrink: 0;
+  mix-blend-mode: multiply; /* Mantiene la integración sin fondo */
+}
+
+.gift-note {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.3;
+  margin: 0;
+  text-align: justify;
+}
+
+/* =========================================
+CÓDIGO DE VESTIMENTA
+========================================= */
+
+.dress-code-box {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 8px 20px;
+    display: inline-block;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.dress-code-title {
+    font-size: 0.7rem;
+    color: var(--text-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dress-code-text {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: var(--text-green);
+}
+
+/* =========================================
+FORMULARIO
+========================================= */
+
+.rsvp-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.rsvp-section h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--text-green);
+    font-size: 1.3rem;
+}
+
+.deadline-badge {
+    background: var(--text-green);
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 8px 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 500;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    background: #fff;
+    font-size: 0.85rem;
+}
+
+button[type="submit"] {
+    background: var(--text-pink);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(216, 137, 129, 0.3);
+}
+
+#id_6.form-line::before{
+    background-color: transparent !important;
+}
+
+/* =========================================
+RESPONSIVE - CELULAR
+========================================= */
+
+@media (max-width: 480px) {
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .img-rama {
+        display: none;
+    }
+
+    /* En celular reducimos un poco los patitos */
+    .img-duck {
+        width: 75px;
+    }
+
+    .bottom-info-content {
+        width: 72%;
+    }
+
+    .duck-left {
+        left: -5px;
+    }
+
+    .duck-right {
+        right: -5px;
+    }
+
+}
+
+.baby-names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0 20px;
+  color: var(--text-green);
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+
+.baby-names .or {
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.baby-names .girl-name{
+    color: var(--text-pink);
+}
+
+
+/* Botón principal */
+.rsvp-trigger-btn {
+  background-color: var(--text-pink, #d88981);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(216, 137, 129, 0.35);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#arrowIcon {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+/* Girar flecha al abrir */
+.rsvp-trigger-btn.active #arrowIcon {
+  transform: rotate(180deg);
+}
+
+/* Persiana */
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  margin-top: 10px;
+}
+
+.collapsible-inner {
+  padding: 10px 0;
+}
