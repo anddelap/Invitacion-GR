@@ -380,7 +380,7 @@ NOTA DE REGALO
     color: #666;
     line-height: 1.3;
     margin: 0;
-    text-align: justify;
+    text-align: center;
 }
 
 /* =========================================
@@ -497,7 +497,7 @@ RESPONSIVE - CELULAR
 
     /* En celular reducimos un poco los patitos */
     .img-duck {
-        width: 75px;
+        width: 25%;
     }
 
     .bottom-info-content {
@@ -505,11 +505,11 @@ RESPONSIVE - CELULAR
     }
 
     .duck-left {
-        left: -5px;
+        left: -15px;
     }
 
     .duck-right {
-        right: -5px;
+        right: -10px;
     }
 
 }
