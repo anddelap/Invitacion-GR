@@ -352,6 +352,12 @@ BLOQUE CONTRIBUCIÓN
     margin: 0;
 }
 
+.contribution-per-person {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
 /* =========================================
 NOTA DE REGALO
 ========================================= */
