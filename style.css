@@ -492,10 +492,10 @@ RESPONSIVE - CELULAR
 
 @media (max-width: 480px) {
 
-    .details-grid {
+    /* .details-grid {
         grid-template-columns: 1fr;
         gap: 15px;
-    }
+    } */
 
     .img-rama {
         display: none;
