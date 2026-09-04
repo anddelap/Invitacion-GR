@@ -578,6 +578,10 @@ RESPONSIVE - CELULAR
     margin-top: 10px;
 }
 
+.collapsible-content.open {
+    max-height: 10000px;
+}
+
 .collapsible-inner {
     padding: 10px 0;
 }
